@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tweeter</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+ 
+      <style>
+        .navbar-brand{
+          color: white;
+        }
+
+        .btn-primary a{
+          color:white;
+        }
+
+        .navbar-right li{
+          background-color:white;
+        }
+
+        table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+        }
+
+        td, th {
+          border: 10px solid #dddddd;
+          text-align: left;
+          padding: 8px;
+        }
+
+        tr:nth-child(even) {
+          background-color: #dddddd;
+        }
+      </style> 
+  </head>
+
+  <body style="font-family: 'Colibri', sans-serif;">
+    <!-- Acces to nav bar-->
+    <%= render '/layouts/nav'%>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-2">
+        </div>
+
+        <div class="col-xs-8">
+          <div class="panel panel-primary">
+            <div class="panel-body">
+               <%= yield %>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-2">
+        </div>
+ 
+        <div class="footer" style="width:100%;position:fixed;text-align:center;left:0;bottom:0;color:white;background-color:#362d2c">
+          <p>Tweeter-Clone</p>
+
+          <%= link_to "|Aide|"%>
+          <%= link_to "A propos|"%>
+          <%= link_to "Contact|"%> 
+    
+
+        </div>
+      </div>
+  </body>
+</html>
