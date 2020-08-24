@@ -10809,3 +10809,1720 @@ Processing by BlogsController#index as HTML
 Completed 200 OK in 41ms (Views: 40.4ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/" for ::1 at 2020-08-24 11:12:35 +0100
+Started GET "/" for ::1 at 2020-08-24 11:12:37 +0100
+  [1m[35m (63.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (63.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by BlogsController#index as HTML
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (85.9ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  [1m[36mBlog Load (86.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:9
+  ↳ app/views/blogs/index.html.erb:9
+  Rendered blogs/index.html.erb within layouts/application (94.9ms)
+  Rendered blogs/index.html.erb within layouts/application (96.7ms)
+  Rendered layouts/_nav.html.erb (0.5ms)
+Completed 200 OK in 8326ms (Views: 8229.0ms | ActiveRecord: 86.5ms)
+
+
+  Rendered layouts/_nav.html.erb (0.0ms)
+Completed 200 OK in 8329ms (Views: 8210.9ms | ActiveRecord: 90.5ms)
+
+
+Started GET "/blogs/new" for ::1 at 2020-08-24 11:13:03 +0100
+Processing by BlogsController#new as HTML
+  Rendering blogs/new.html.erb within layouts/application
+  Rendered blogs/_form.html.erb (85.7ms)
+  Rendered blogs/new.html.erb within layouts/application (87.4ms)
+  Rendered layouts/_nav.html.erb (0.4ms)
+Completed 200 OK in 191ms (Views: 129.0ms | ActiveRecord: 48.9ms)
+
+
+Started POST "/blogs/confirm" for ::1 at 2020-08-24 11:13:16 +0100
+Processing by BlogsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QjYPxaWe1zYrdnQdDE9qpfCmyz4jil27X2IJAGBtb+VGfyLHQK0Xmp73akcdFS7nUCU5rswGrMpgBioW27yeWw==", "blog"=>{"content"=>"bonjours je suis du texte\r\n"}, "commit"=>"Create Blog"}
+  Rendering blogs/confirm.html.erb within layouts/application
+  Rendered blogs/confirm.html.erb within layouts/application (12.9ms)
+  Rendered layouts/_nav.html.erb (0.3ms)
+Completed 200 OK in 59ms (Views: 57.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/blogs" for ::1 at 2020-08-24 11:13:18 +0100
+Processing by BlogsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W582Dxj3eEfM30aHDXZWzOdgENF4np6jQFCEIUbd+hdf1hsN/cS463leWN0cLBKOR+PiQZcSb9J/NKc3/QwLqQ==", "blog"=>{"content"=>"bonjours je suis du texte\r\n"}, "commit"=>"Valider"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/blogs_controller.rb:18
+  [1m[36mBlog Create (120.5ms)[0m  [1m[32mINSERT INTO "blogs" ("content", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["content", "bonjours je suis du texte\r\n"], ["created_at", "2020-08-24 11:13:18.173061"], ["updated_at", "2020-08-24 11:13:18.173061"]]
+  ↳ app/controllers/blogs_controller.rb:18
+  [1m[35m (19.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/blogs_controller.rb:18
+Redirected to http://localhost:3000/blogs
+Completed 302 Found in 147ms (ActiveRecord: 140.5ms)
+
+
+Started GET "/blogs" for ::1 at 2020-08-24 11:13:18 +0100
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:9
+  Rendered blogs/index.html.erb within layouts/application (17.9ms)
+  Rendered layouts/_nav.html.erb (0.4ms)
+Completed 200 OK in 68ms (Views: 66.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/blogs/new" for ::1 at 2020-08-24 11:15:25 +0100
+Processing by BlogsController#new as HTML
+  Rendering blogs/new.html.erb within layouts/application
+  Rendered blogs/_form.html.erb (2.0ms)
+  Rendered blogs/new.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_nav.html.erb (0.5ms)
+Completed 200 OK in 55ms (Views: 53.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/blogs/confirm" for ::1 at 2020-08-24 11:15:36 +0100
+Processing by BlogsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MJUHIcI/nqs/HIAxakM71IV1Cx97MEdV//xUaUCmP2803CojJwxeB4qdnmt7GX+WJfb5j5S8tiTAmHd/+3fO0Q==", "blog"=>{"content"=>"je suis du texte 2"}, "commit"=>"Create Blog"}
+  Rendering blogs/confirm.html.erb within layouts/application
+  Rendered blogs/confirm.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_nav.html.erb (0.3ms)
+Completed 200 OK in 55ms (Views: 52.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/blogs" for ::1 at 2020-08-24 11:15:37 +0100
+Processing by BlogsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4botp02JUcbQnpK+jBU7KtIknoRYGHVJk9ai4ftFhfXl8wClqLqRamUfjOSdT39ocqdsFLeUhDissoH3QJR0Sw==", "blog"=>{"content"=>"je suis du texte 2"}, "commit"=>"Valider"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/blogs_controller.rb:18
+  [1m[36mBlog Create (0.4ms)[0m  [1m[32mINSERT INTO "blogs" ("content", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["content", "je suis du texte 2"], ["created_at", "2020-08-24 11:15:37.436163"], ["updated_at", "2020-08-24 11:15:37.436163"]]
+  ↳ app/controllers/blogs_controller.rb:18
+  [1m[35m (348.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/blogs_controller.rb:18
+Redirected to http://localhost:3000/blogs
+Completed 302 Found in 357ms (ActiveRecord: 349.0ms)
+
+
+Started GET "/blogs" for ::1 at 2020-08-24 11:15:37 +0100
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:9
+  Rendered blogs/index.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_nav.html.erb (0.3ms)
+Completed 200 OK in 53ms (Views: 51.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/blogs/new" for ::1 at 2020-08-24 11:15:39 +0100
+Processing by BlogsController#new as HTML
+  Rendering blogs/new.html.erb within layouts/application
+  Rendered blogs/_form.html.erb (1.6ms)
+  Rendered blogs/new.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_nav.html.erb (0.3ms)
+Completed 200 OK in 46ms (Views: 44.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/blogs/confirm" for ::1 at 2020-08-24 11:15:46 +0100
+Processing by BlogsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ayUDqsVf6CrlsiK9TmF92aSxsW/25t9TFCJ8ivQMNERvbC6oIGwohlAzPOdfOzmbBDJD/xlqLiIrRl+cT93F+g==", "blog"=>{"content"=>"je suis du texte 3"}, "commit"=>"Create Blog"}
+  Rendering blogs/confirm.html.erb within layouts/application
+  Rendered blogs/confirm.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_nav.html.erb (0.5ms)
+Completed 200 OK in 53ms (Views: 51.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/blogs" for ::1 at 2020-08-24 11:15:48 +0100
+Processing by BlogsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eHyfNcX+WPG1K13ClrwehYKRvYzRPObjOpuQP+0LhJt8NbI3IM2YXQCqQ5iH5lrHIhJPHD6wF5IF/7MpVtp1JQ==", "blog"=>{"content"=>"je suis du texte 3"}, "commit"=>"Valider"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/blogs_controller.rb:18
+  [1m[36mBlog Create (0.6ms)[0m  [1m[32mINSERT INTO "blogs" ("content", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["content", "je suis du texte 3"], ["created_at", "2020-08-24 11:15:48.402396"], ["updated_at", "2020-08-24 11:15:48.402396"]]
+  ↳ app/controllers/blogs_controller.rb:18
+  [1m[35m (49.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/blogs_controller.rb:18
+Redirected to http://localhost:3000/blogs
+Completed 302 Found in 56ms (ActiveRecord: 50.0ms)
+
+
+Started GET "/blogs" for ::1 at 2020-08-24 11:15:48 +0100
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:9
+  Rendered blogs/index.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_nav.html.erb (0.3ms)
+Completed 200 OK in 59ms (Views: 56.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/blogs/new" for ::1 at 2020-08-24 11:15:49 +0100
+Processing by BlogsController#new as HTML
+  Rendering blogs/new.html.erb within layouts/application
+  Rendered blogs/_form.html.erb (1.7ms)
+  Rendered blogs/new.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_nav.html.erb (0.4ms)
+Completed 200 OK in 58ms (Views: 56.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/blogs/confirm" for ::1 at 2020-08-24 11:16:00 +0100
+Processing by BlogsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o03oNc30wbc1gDfDX24Sd0+lSo4j6UK7fyihr4d2pLinBMU3KMcBG4ABKZlONFY17ya4Hsxls8pATIK5PKdVBg==", "blog"=>{"content"=>"je suis du texte4"}, "commit"=>"Create Blog"}
+  Rendering blogs/confirm.html.erb within layouts/application
+  Rendered blogs/confirm.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_nav.html.erb (0.3ms)
+Completed 200 OK in 49ms (Views: 45.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/blogs" for ::1 at 2020-08-24 11:16:01 +0100
+Processing by BlogsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ieAYncv0Vw0O1ElnGT6hMy0yfXR2fv1BBtiPJmNN51mNqTWfLseXobtVVz0IZOVxjbGP5JnyDDA5vKww2JwW5w==", "blog"=>{"content"=>"je suis du texte4"}, "commit"=>"Valider"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/blogs_controller.rb:18
+  [1m[36mBlog Create (1.1ms)[0m  [1m[32mINSERT INTO "blogs" ("content", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["content", "je suis du texte4"], ["created_at", "2020-08-24 11:16:01.823661"], ["updated_at", "2020-08-24 11:16:01.823661"]]
+  ↳ app/controllers/blogs_controller.rb:18
+  [1m[35m (415.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/blogs_controller.rb:18
+Redirected to http://localhost:3000/blogs
+Completed 302 Found in 423ms (ActiveRecord: 417.2ms)
+
+
+Started GET "/blogs" for ::1 at 2020-08-24 11:16:02 +0100
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:9
+  Rendered blogs/index.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_nav.html.erb (0.3ms)
+Completed 200 OK in 46ms (Views: 44.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/blogs/new" for ::1 at 2020-08-24 11:16:03 +0100
+Processing by BlogsController#new as HTML
+  Rendering blogs/new.html.erb within layouts/application
+  Rendered blogs/_form.html.erb (2.0ms)
+  Rendered blogs/new.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_nav.html.erb (0.4ms)
+Completed 200 OK in 46ms (Views: 44.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/blogs/confirm" for ::1 at 2020-08-24 11:16:10 +0100
+Processing by BlogsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OZJdglRke1ZaXB6KtE6KnzDpDbLfvvr8wDJK0WweHUI923CAsVe7+u/dANClFM7dkGr/IjAyC43/VmnH18/s/A==", "blog"=>{"content"=>"je suis du texte 5"}, "commit"=>"Create Blog"}
+  Rendering blogs/confirm.html.erb within layouts/application
+  Rendered blogs/confirm.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_nav.html.erb (0.4ms)
+Completed 200 OK in 52ms (Views: 48.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/blogs" for ::1 at 2020-08-24 11:16:11 +0100
+Processing by BlogsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"z3yEw6XFnALpkNAMEfw75McqAGWVskCR4B3teppxTQnLNanBQPZcrlwRzlYApn+mZ6ny9Xo+seDfec5sIaC8tw==", "blog"=>{"content"=>"je suis du texte 5"}, "commit"=>"Valider"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/blogs_controller.rb:18
+  [1m[36mBlog Create (578.8ms)[0m  [1m[32mINSERT INTO "blogs" ("content", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["content", "je suis du texte 5"], ["created_at", "2020-08-24 11:16:11.317828"], ["updated_at", "2020-08-24 11:16:11.317828"]]
+  ↳ app/controllers/blogs_controller.rb:18
+  [1m[35m (45.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/blogs_controller.rb:18
+Redirected to http://localhost:3000/blogs
+Completed 302 Found in 630ms (ActiveRecord: 624.2ms)
+
+
+Started GET "/blogs" for ::1 at 2020-08-24 11:16:11 +0100
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:9
+  Rendered blogs/index.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_nav.html.erb (0.4ms)
+Completed 200 OK in 49ms (Views: 48.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/blogs/new" for ::1 at 2020-08-24 11:16:13 +0100
+Processing by BlogsController#new as HTML
+  Rendering blogs/new.html.erb within layouts/application
+  Rendered blogs/_form.html.erb (1.6ms)
+  Rendered blogs/new.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_nav.html.erb (0.3ms)
+Completed 200 OK in 48ms (Views: 46.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/blogs/confirm" for ::1 at 2020-08-24 11:16:21 +0100
+Processing by BlogsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UDp2e7gsWewSxTC8vHfUMzbCxTpeOWW/gI2k0nVi2hlUc1t5XR+ZQKdELuatLZBxlkE3qrG1lM6/6YfEzrMrpw==", "blog"=>{"content"=>"encore plus de texte"}, "commit"=>"Create Blog"}
+  Rendering blogs/confirm.html.erb within layouts/application
+  Rendered blogs/confirm.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_nav.html.erb (0.3ms)
+Completed 200 OK in 67ms (Views: 64.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/blogs" for ::1 at 2020-08-24 11:16:22 +0100
+Processing by BlogsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AZJOUB/BSO+4EoIXrupGNRkQgbPd2El5fiJTFHIzeM4F22NS+vKIQw2TnE2/sAJ3uZNzIzJUuAhBRnACyeKJcA==", "blog"=>{"content"=>"encore plus de texte"}, "commit"=>"Valider"}
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/blogs_controller.rb:18
+  [1m[36mBlog Create (0.5ms)[0m  [1m[32mINSERT INTO "blogs" ("content", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["content", "encore plus de texte"], ["created_at", "2020-08-24 11:16:22.499567"], ["updated_at", "2020-08-24 11:16:22.499567"]]
+  ↳ app/controllers/blogs_controller.rb:18
+  [1m[35m (8.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/blogs_controller.rb:18
+Redirected to http://localhost:3000/blogs
+Completed 302 Found in 15ms (ActiveRecord: 10.1ms)
+
+
+Started GET "/blogs" for ::1 at 2020-08-24 11:16:22 +0100
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:9
+  Rendered blogs/index.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_nav.html.erb (0.3ms)
+Completed 200 OK in 49ms (Views: 47.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/blogs/new" for ::1 at 2020-08-24 11:16:29 +0100
+Processing by BlogsController#new as HTML
+  Rendering blogs/new.html.erb within layouts/application
+  Rendered blogs/_form.html.erb (1.8ms)
+  Rendered blogs/new.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_nav.html.erb (0.3ms)
+Completed 200 OK in 43ms (Views: 42.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/blogs/confirm" for ::1 at 2020-08-24 11:16:38 +0100
+Processing by BlogsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WGksl2S6DCTQx1aynkxSFmMqKZv2Uu1NCnDiw4Kx0QNcIAGVgYnMiGVGSOiPFhZUw6nbCxneHDw1FMHVOWAgvQ==", "blog"=>{"content"=>"plus de texte vers le haut"}, "commit"=>"Create Blog"}
+  Rendering blogs/confirm.html.erb within layouts/application
+  Rendered blogs/confirm.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_nav.html.erb (0.4ms)
+Completed 200 OK in 42ms (Views: 39.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/blogs" for ::1 at 2020-08-24 11:16:40 +0100
+Processing by BlogsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"44scAt++7upxB828adsm32Qv6gK20+n3syvhxcocO6bnwjEAOo0uRsSG0+Z4gWKdxKwYkllfGIaMT8LTcc3KGA==", "blog"=>{"content"=>"plus de texte vers le haut"}, "commit"=>"Valider"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/blogs_controller.rb:18
+  [1m[36mBlog Create (0.6ms)[0m  [1m[32mINSERT INTO "blogs" ("content", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["content", "plus de texte vers le haut"], ["created_at", "2020-08-24 11:16:40.239683"], ["updated_at", "2020-08-24 11:16:40.239683"]]
+  ↳ app/controllers/blogs_controller.rb:18
+  [1m[35m (47.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/blogs_controller.rb:18
+Redirected to http://localhost:3000/blogs
+Completed 302 Found in 53ms (ActiveRecord: 48.4ms)
+
+
+Started GET "/blogs" for ::1 at 2020-08-24 11:16:40 +0100
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:9
+  Rendered blogs/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_nav.html.erb (0.3ms)
+Completed 200 OK in 40ms (Views: 38.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/blogs/new" for ::1 at 2020-08-24 11:16:43 +0100
+Processing by BlogsController#new as HTML
+  Rendering blogs/new.html.erb within layouts/application
+  Rendered blogs/_form.html.erb (2.0ms)
+  Rendered blogs/new.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_nav.html.erb (0.3ms)
+Completed 200 OK in 46ms (Views: 44.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/blogs/confirm" for ::1 at 2020-08-24 11:16:57 +0100
+Processing by BlogsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J035x9FP8qCPddq8ddz8duVYP+PoM8qrfF4pVgdLoi8jBNTFNHwyDDr0xOZkhrg0RdvNcwe/O9pDOgpAvJpTkQ==", "blog"=>{"content"=>"encore et encore du texte"}, "commit"=>"Create Blog"}
+  Rendering blogs/confirm.html.erb within layouts/application
+  Rendered blogs/confirm.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_nav.html.erb (0.4ms)
+Completed 200 OK in 40ms (Views: 37.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/blogs" for ::1 at 2020-08-24 11:16:59 +0100
+Processing by BlogsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ic8aLFLJA94EEa5TppoFQRokZYGRvEOIDjLVy8yl3muNhjcut/rDcrGQsAm3wEEDuqeXEX4wsvkxVvbdd3Qv1Q==", "blog"=>{"content"=>"encore et encore du texte"}, "commit"=>"Valider"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/blogs_controller.rb:18
+  [1m[36mBlog Create (0.4ms)[0m  [1m[32mINSERT INTO "blogs" ("content", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["content", "encore et encore du texte"], ["created_at", "2020-08-24 11:16:59.943774"], ["updated_at", "2020-08-24 11:16:59.943774"]]
+  ↳ app/controllers/blogs_controller.rb:18
+  [1m[35m (622.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/blogs_controller.rb:18
+Redirected to http://localhost:3000/blogs
+Completed 302 Found in 627ms (ActiveRecord: 622.7ms)
+
+
+Started GET "/blogs" for ::1 at 2020-08-24 11:17:00 +0100
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (1.0ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:9
+  Rendered blogs/index.html.erb within layouts/application (6.6ms)
+  Rendered layouts/_nav.html.erb (0.3ms)
+Completed 200 OK in 60ms (Views: 55.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/blogs/new" for ::1 at 2020-08-24 11:18:01 +0100
+Processing by BlogsController#new as HTML
+  Rendering blogs/new.html.erb within layouts/application
+  Rendered blogs/_form.html.erb (3.5ms)
+  Rendered blogs/new.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_nav.html.erb (0.3ms)
+Completed 200 OK in 47ms (Views: 45.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/blogs/confirm" for ::1 at 2020-08-24 11:18:10 +0100
+Processing by BlogsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6i7h4s/ptOUxHVbln9Wg89o97lbJqkLytGyiCAkefB7uZ8zgKtp0SYScSL+Oj+Sxer4cxiYms4OLCIEess+NoA==", "blog"=>{"content"=>"cool texte en plus"}, "commit"=>"Create Blog"}
+  Rendering blogs/confirm.html.erb within layouts/application
+  Rendered blogs/confirm.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_nav.html.erb (0.3ms)
+Completed 200 OK in 47ms (Views: 45.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/blogs" for ::1 at 2020-08-24 11:18:11 +0100
+Processing by BlogsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ntEaE+MPPwJzCivKbWwdPHu0QSkQLzGI22YLGjQOSxKamDcRBjz/rsaLNZB8Nll+2zezuf+jwPnkAigMj9+6rA==", "blog"=>{"content"=>"cool texte en plus"}, "commit"=>"Valider"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/blogs_controller.rb:18
+  [1m[36mBlog Create (0.5ms)[0m  [1m[32mINSERT INTO "blogs" ("content", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["content", "cool texte en plus"], ["created_at", "2020-08-24 11:18:11.610288"], ["updated_at", "2020-08-24 11:18:11.610288"]]
+  ↳ app/controllers/blogs_controller.rb:18
+  [1m[35m (273.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/blogs_controller.rb:18
+Redirected to http://localhost:3000/blogs
+Completed 302 Found in 278ms (ActiveRecord: 274.1ms)
+
+
+Started GET "/blogs" for ::1 at 2020-08-24 11:18:11 +0100
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:9
+  Rendered blogs/index.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_nav.html.erb (0.5ms)
+Completed 200 OK in 42ms (Views: 40.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/blogs" for ::1 at 2020-08-24 11:18:58 +0100
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:9
+  Rendered blogs/index.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_nav.html.erb (0.3ms)
+Completed 200 OK in 41ms (Views: 39.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-08-24 12:10:34 +0100
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.6ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:9
+  Rendered blogs/index.html.erb within layouts/application (28.5ms)
+  Rendered layouts/_nav.html.erb (0.9ms)
+Completed 200 OK in 411ms (Views: 387.2ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/blogs/new" for ::1 at 2020-08-24 12:10:40 +0100
+Processing by BlogsController#new as HTML
+  Rendering blogs/new.html.erb within layouts/application
+  Rendered blogs/_form.html.erb (6.7ms)
+  Rendered blogs/new.html.erb within layouts/application (7.9ms)
+  Rendered layouts/_nav.html.erb (0.4ms)
+Completed 200 OK in 117ms (Views: 115.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/blogs/confirm" for ::1 at 2020-08-24 12:10:46 +0100
+Processing by BlogsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LZH8tBFotwyMiWoIJAPD+SsruhtvsToWdf9bl4m1nv8p2NG29Ft3oDkIdFI1WYe7i6hIi4A9y2dKm3iBMmRvQQ==", "blog"=>{"content"=>"bjr \r\n"}, "commit"=>"Create Blog"}
+  Rendering blogs/confirm.html.erb within layouts/application
+  Rendered blogs/confirm.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_nav.html.erb (0.3ms)
+Completed 200 OK in 112ms (Views: 107.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/blogs" for ::1 at 2020-08-24 12:10:48 +0100
+Processing by BlogsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vUCiFPVgDl3Ifa6wStW091s+aLxy857d688oZoPG6Oi5CY8WEFPO8X38sOpbj/C1+72aLJ1/b6zUqwtwOBcZVg==", "blog"=>{"content"=>"bjr \r\n"}, "commit"=>"Valider"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/blogs_controller.rb:18
+  [1m[36mBlog Create (1.3ms)[0m  [1m[32mINSERT INTO "blogs" ("content", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["content", "bjr \r\n"], ["created_at", "2020-08-24 12:10:48.084975"], ["updated_at", "2020-08-24 12:10:48.084975"]]
+  ↳ app/controllers/blogs_controller.rb:18
+  [1m[35m (60.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/blogs_controller.rb:18
+Redirected to http://localhost:3000/blogs
+Completed 302 Found in 68ms (ActiveRecord: 61.6ms)
+
+
+Started GET "/blogs" for ::1 at 2020-08-24 12:10:48 +0100
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (1.9ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:9
+  Rendered blogs/index.html.erb within layouts/application (10.9ms)
+  Rendered layouts/_nav.html.erb (0.4ms)
+Completed 200 OK in 98ms (Views: 92.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/blogs" for ::1 at 2020-08-24 12:13:50 +0100
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:9
+  Rendered blogs/index.html.erb within layouts/application (23.3ms)
+  Rendered layouts/_nav.html.erb (0.5ms)
+Completed 200 OK in 960ms (Views: 938.4ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/" for ::1 at 2020-08-24 12:13:56 +0100
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:9
+  Rendered blogs/index.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_nav.html.erb (0.3ms)
+Completed 200 OK in 94ms (Views: 92.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/blogs" for ::1 at 2020-08-24 12:14:00 +0100
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (1.2ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:9
+  Rendered blogs/index.html.erb within layouts/application (14.4ms)
+  Rendered layouts/_nav.html.erb (0.3ms)
+Completed 200 OK in 101ms (Views: 96.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/blogs" for ::1 at 2020-08-24 12:14:02 +0100
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:9
+  Rendered blogs/index.html.erb within layouts/application (5.5ms)
+  Rendered layouts/_nav.html.erb (2.1ms)
+Completed 200 OK in 76ms (Views: 74.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/blogs" for ::1 at 2020-08-24 12:14:04 +0100
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:9
+  Rendered blogs/index.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_nav.html.erb (0.3ms)
+Completed 200 OK in 56ms (Views: 54.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/blogs" for ::1 at 2020-08-24 12:14:05 +0100
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:9
+  Rendered blogs/index.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_nav.html.erb (0.5ms)
+Completed 200 OK in 53ms (Views: 51.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-08-24 12:14:09 +0100
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:9
+  Rendered blogs/index.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_nav.html.erb (0.8ms)
+Completed 200 OK in 54ms (Views: 51.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/blogs" for ::1 at 2020-08-24 12:14:11 +0100
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:9
+  Rendered blogs/index.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_nav.html.erb (0.4ms)
+Completed 200 OK in 67ms (Views: 65.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/blogs" for ::1 at 2020-08-24 12:14:14 +0100
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:9
+  Rendered blogs/index.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_nav.html.erb (2.0ms)
+Completed 200 OK in 68ms (Views: 66.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-08-24 12:15:48 +0100
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.7ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:9
+  Rendered blogs/index.html.erb within layouts/application (18.5ms)
+  Rendered layouts/_nav.html.erb (0.3ms)
+Completed 200 OK in 272ms (Views: 256.0ms | ActiveRecord: 6.5ms)
+
+
+Started DELETE "/blogs/6" for ::1 at 2020-08-24 12:15:56 +0100
+Processing by BlogsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"G6agtEyBZLqvF5Vv6syasoAieqgUkJ8mmJzD7OdP5Dcf7422qbKkFhqWizX7lt7wIKGIOPscblen+OD6XJ4ViQ==", "id"=>"6"}
+  [1m[36mBlog Load (0.6ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:60
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/blogs_controller.rb:45
+  [1m[36mBlog Destroy (56.8ms)[0m  [1m[31mDELETE FROM "blogs" WHERE "blogs"."id" = $1[0m  [["id", 6]]
+  ↳ app/controllers/blogs_controller.rb:45
+  [1m[35m (23.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/blogs_controller.rb:45
+Redirected to http://localhost:3000/blogs
+Completed 302 Found in 426ms (ActiveRecord: 81.6ms)
+
+
+Started GET "/blogs" for ::1 at 2020-08-24 12:15:57 +0100
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (1.2ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:9
+  Rendered blogs/index.html.erb within layouts/application (8.0ms)
+  Rendered layouts/_nav.html.erb (0.3ms)
+Completed 200 OK in 124ms (Views: 120.0ms | ActiveRecord: 1.2ms)
+
+
+Started DELETE "/blogs/7" for ::1 at 2020-08-24 12:15:58 +0100
+Processing by BlogsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"d852msXo/FQA7B/yTJX+0YgSagBnLswo1HwmAMm0j7tzh1uYINs8+LVtAahdz7qTKJGYkIiiPVnrGAUWcmV+BQ==", "id"=>"7"}
+  [1m[36mBlog Load (0.6ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:60
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/blogs_controller.rb:45
+  [1m[36mBlog Destroy (0.6ms)[0m  [1m[31mDELETE FROM "blogs" WHERE "blogs"."id" = $1[0m  [["id", 7]]
+  ↳ app/controllers/blogs_controller.rb:45
+  [1m[35m (425.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/blogs_controller.rb:45
+Redirected to http://localhost:3000/blogs
+Completed 302 Found in 435ms (ActiveRecord: 427.0ms)
+
+
+Started GET "/blogs" for ::1 at 2020-08-24 12:15:59 +0100
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.7ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:9
+  Rendered blogs/index.html.erb within layouts/application (9.5ms)
+  Rendered layouts/_nav.html.erb (0.6ms)
+Completed 200 OK in 129ms (Views: 125.7ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/blogs/8" for ::1 at 2020-08-24 12:16:01 +0100
+Processing by BlogsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"bnfVSZwNj6HCDkMddPWHY3LZiQDHNbH53iL8GQFSan9qPvhLeT5PDXePXUdlr8Mh0lp7kCi5QIjhRt8PuoObwQ==", "id"=>"8"}
+  [1m[36mBlog Load (0.6ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:60
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/blogs_controller.rb:45
+  [1m[36mBlog Destroy (0.3ms)[0m  [1m[31mDELETE FROM "blogs" WHERE "blogs"."id" = $1[0m  [["id", 8]]
+  ↳ app/controllers/blogs_controller.rb:45
+  [1m[35m (33.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/blogs_controller.rb:45
+Redirected to http://localhost:3000/blogs
+Completed 302 Found in 38ms (ActiveRecord: 34.5ms)
+
+
+Started GET "/blogs" for ::1 at 2020-08-24 12:16:01 +0100
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.8ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:9
+  Rendered blogs/index.html.erb within layouts/application (7.1ms)
+  Rendered layouts/_nav.html.erb (0.3ms)
+Completed 200 OK in 74ms (Views: 70.0ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/blogs/9" for ::1 at 2020-08-24 12:16:02 +0100
+Processing by BlogsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"g1PwOpA/otlZUhjJKGR1kW0gVzDpom8bXapstGaaQQmHGt04dQxidezTBpM5PjHTzaOloAYunmpizk+i3Uuwtw==", "id"=>"9"}
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:60
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/blogs_controller.rb:45
+  [1m[36mBlog Destroy (0.4ms)[0m  [1m[31mDELETE FROM "blogs" WHERE "blogs"."id" = $1[0m  [["id", 9]]
+  ↳ app/controllers/blogs_controller.rb:45
+  [1m[35m (121.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/blogs_controller.rb:45
+Redirected to http://localhost:3000/blogs
+Completed 302 Found in 126ms (ActiveRecord: 122.6ms)
+
+
+Started GET "/blogs" for ::1 at 2020-08-24 12:16:02 +0100
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:9
+  Rendered blogs/index.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_nav.html.erb (0.6ms)
+Completed 200 OK in 56ms (Views: 54.2ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/blogs/10" for ::1 at 2020-08-24 12:16:03 +0100
+Processing by BlogsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"EY2QI5r+ETKB0+iOx+NZwlHC3BGHd+agJG7vRIJxLDcVxL0hf83RnjRS9tTWuR2A8UEugWj7F9EbCsxSOaDdiQ==", "id"=>"10"}
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:60
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/blogs_controller.rb:45
+  [1m[36mBlog Destroy (0.4ms)[0m  [1m[31mDELETE FROM "blogs" WHERE "blogs"."id" = $1[0m  [["id", 10]]
+  ↳ app/controllers/blogs_controller.rb:45
+  [1m[35m (583.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/blogs_controller.rb:45
+Redirected to http://localhost:3000/blogs
+Completed 302 Found in 590ms (ActiveRecord: 584.1ms)
+
+
+Started GET "/blogs" for ::1 at 2020-08-24 12:16:03 +0100
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.6ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:9
+  Rendered blogs/index.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_nav.html.erb (0.3ms)
+Completed 200 OK in 47ms (Views: 45.5ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/blogs/11" for ::1 at 2020-08-24 12:16:04 +0100
+Processing by BlogsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"sd4CWKOypB2ZoKWj/o8EiNFG08gsZxqTh6vu0yvWcKK1ly9aRoFksSwhu/nv1UDKccUhWMPr6+K4z83FkAeBHA==", "id"=>"11"}
+  [1m[36mBlog Load (1.7ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:60
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/blogs_controller.rb:45
+  [1m[36mBlog Destroy (0.5ms)[0m  [1m[31mDELETE FROM "blogs" WHERE "blogs"."id" = $1[0m  [["id", 11]]
+  ↳ app/controllers/blogs_controller.rb:45
+  [1m[35m (773.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/blogs_controller.rb:45
+Redirected to http://localhost:3000/blogs
+Completed 302 Found in 781ms (ActiveRecord: 775.6ms)
+
+
+Started GET "/blogs" for ::1 at 2020-08-24 12:16:04 +0100
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:9
+  Rendered blogs/index.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_nav.html.erb (0.5ms)
+Completed 200 OK in 74ms (Views: 72.2ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/blogs/11" for ::1 at 2020-08-24 12:16:05 +0100
+Processing by BlogsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"sd4CWKOypB2ZoKWj/o8EiNFG08gsZxqTh6vu0yvWcKK1ly9aRoFksSwhu/nv1UDKccUhWMPr6+K4z83FkAeBHA==", "id"=>"11"}
+  [1m[36mBlog Load (1.2ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:60
+Completed 404 Not Found in 4ms (ActiveRecord: 1.2ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Blog with 'id'=11:
+  app/controllers/blogs_controller.rb:60:in `set_blog'
+
+Started POST "/__better_errors/19413c48e8061e0e/variables" for ::1 at 2020-08-24 12:16:05 +0100
+Started GET "/" for ::1 at 2020-08-24 12:18:51 +0100
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.8ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:9
+  Rendered blogs/index.html.erb within layouts/application (21.4ms)
+  Rendered layouts/_nav.html.erb (0.6ms)
+Completed 200 OK in 314ms (Views: 291.0ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/blogs" for ::1 at 2020-08-24 12:18:57 +0100
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:9
+  Rendered blogs/index.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_nav.html.erb (0.4ms)
+Completed 200 OK in 90ms (Views: 87.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-08-24 12:29:45 +0100
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+:
+
+Started POST "/__better_errors/8274b3f2a2291c36/variables" for ::1 at 2020-08-24 12:29:46 +0100
+  [1m[35m (100.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7395633852180811650)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddSomeTimestampFieldToLogs (20200824112904)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (16.4ms)[0m  [1m[35mALTER TABLE "logs" ADD "my_timestamp_field" timestamp[0m
+  ↳ db/migrate/20200824112904_add_some_timestamp_field_to_logs.rb:3
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7395633852180811650)[0m
+  ↳ bin/rails:9
+Started GET "/" for ::1 at 2020-08-24 12:31:37 +0100
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+:
+
+Started POST "/__better_errors/07096e36265f2739/variables" for ::1 at 2020-08-24 12:31:37 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7395633852180811650)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddSomeTimestampFieldToLogs (20200824112904)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (1.5ms)[0m  [1m[35mALTER TABLE "logs" ADD "my_timestamp_field" timestamp[0m
+  ↳ db/migrate/20200824112904_add_some_timestamp_field_to_logs.rb:3
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7395633852180811650)[0m
+  ↳ bin/rails:9
+Started GET "/" for ::1 at 2020-08-24 12:32:50 +0100
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+:
+
+Started POST "/__better_errors/2b8f67c59857b2f8/variables" for ::1 at 2020-08-24 12:32:50 +0100
+Started GET "/" for ::1 at 2020-08-24 12:33:11 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+:
+
+Started POST "/__better_errors/d79d11449643354e/variables" for ::1 at 2020-08-24 12:33:11 +0100
+Started POST "/__better_errors/d79d11449643354e/variables" for ::1 at 2020-08-24 12:33:17 +0100
+Started POST "/__better_errors/d79d11449643354e/variables" for ::1 at 2020-08-24 12:33:20 +0100
+Started POST "/__better_errors/d79d11449643354e/eval" for ::1 at 2020-08-24 12:36:34 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7395633852180811650)[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/bin/rake:23
+Migrating to AddSomeTimestampFieldToLogs (20200824112904)
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/bin/rake:23
+  [1m[35m (1.9ms)[0m  [1m[35mALTER TABLE "logs" ADD "my_timestamp_field" timestamp[0m
+  ↳ db/migrate/20200824112904_add_some_timestamp_field_to_logs.rb:3
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7395633852180811650)[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/bin/rake:23
+Started GET "/" for ::1 at 2020-08-24 12:40:52 +0100
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+:
+
+Started POST "/__better_errors/655e869b3a1733b6/variables" for ::1 at 2020-08-24 12:40:52 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7395633852180811650)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddSomeTimestampFieldToLogs (20200824112904)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (1.5ms)[0m  [1m[35mALTER TABLE "logs" ADD "my_timestamp_field" timestamp[0m
+  ↳ db/migrate/20200824112904_add_some_timestamp_field_to_logs.rb:3
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(7395633852180811650)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7395633852180811650)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddSomeTimestampFieldToLogs (20200824112904)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (1.6ms)[0m  [1m[35mALTER TABLE "logs" ADD "my_timestamp_field" timestamp[0m
+  ↳ db/migrate/20200824112904_add_some_timestamp_field_to_logs.rb:3
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(7395633852180811650)[0m
+  ↳ bin/rails:9
+Started GET "/" for ::1 at 2020-08-24 12:44:03 +0100
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+:
+
+Started POST "/__better_errors/02b53c5b80f4a88c/variables" for ::1 at 2020-08-24 12:44:04 +0100
+Started POST "/__better_errors/02b53c5b80f4a88c/variables" for ::1 at 2020-08-24 12:44:39 +0100
+Started GET "/" for ::1 at 2020-08-24 12:55:15 +0100
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+:
+
+Started POST "/__better_errors/ac1f6911a3b6bd22/variables" for ::1 at 2020-08-24 12:55:15 +0100
+Started GET "/" for ::1 at 2020-08-24 12:55:16 +0100
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+:
+
+Started POST "/__better_errors/f27787fd488a87ae/variables" for ::1 at 2020-08-24 12:55:16 +0100
+Started GET "/" for ::1 at 2020-08-24 12:55:17 +0100
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+:
+
+Started POST "/__better_errors/0b74d99e3f23129a/variables" for ::1 at 2020-08-24 12:55:17 +0100
+Started GET "/" for ::1 at 2020-08-24 12:55:18 +0100
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+:
+
+Started POST "/__better_errors/8f258b633ccabacd/variables" for ::1 at 2020-08-24 12:55:18 +0100
+Started GET "/" for ::1 at 2020-08-24 14:22:04 +0100
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+:
+
+Started POST "/__better_errors/b2ed2e4e596f18b2/variables" for ::1 at 2020-08-24 14:22:04 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7395633852180811650)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddSomeTimestampFieldToLogs (20200824112904)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "logs" ADD "my_timestamp_field" timestamp[0m
+  ↳ db/migrate/20200824112904_add_some_timestamp_field_to_logs.rb:3
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7395633852180811650)[0m
+  ↳ bin/rails:9
+Started GET "/" for ::1 at 2020-08-24 14:42:02 +0100
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+:
+
+Started POST "/__better_errors/f36ed94930ecd197/variables" for ::1 at 2020-08-24 14:42:02 +0100
+Started GET "/" for ::1 at 2020-08-24 14:42:04 +0100
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+:
+
+Started POST "/__better_errors/046a7319b7329d0a/variables" for ::1 at 2020-08-24 14:42:04 +0100
+Started GET "/" for ::1 at 2020-08-24 14:42:05 +0100
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+:
+
+Started POST "/__better_errors/c04af2f135f942dd/variables" for ::1 at 2020-08-24 14:42:05 +0100
+  [1m[35m (423.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "sample_development"[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/bin/rake:23
+  [1m[35m (340.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "sample_test"[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/bin/rake:23
+  [1m[35m (1569.6ms)[0m  [1m[35mCREATE DATABASE "sample_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (843.3ms)[0m  [1m[35mCREATE DATABASE "sample_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (132.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/bin/rake:23
+  [1m[35m (88.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7395633852180811650)[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/bin/rake:23
+Migrating to AddSomeTimestampFieldToLogs (20200824112904)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/bin/rake:23
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "logs" ADD "my_timestamp_field" timestamp[0m
+  ↳ db/migrate/20200824112904_add_some_timestamp_field_to_logs.rb:3
+  [1m[35m (1.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(7395633852180811650)[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/bin/rake:23
+Started GET "/" for ::1 at 2020-08-24 14:56:43 +0100
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+:
+
+Started POST "/__better_errors/85f915407da54d9c/variables" for ::1 at 2020-08-24 14:56:43 +0100
+Started GET "/" for ::1 at 2020-08-24 14:56:45 +0100
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+:
+
+Started POST "/__better_errors/8c2a1ce3e467a41e/variables" for ::1 at 2020-08-24 14:56:45 +0100
+Started GET "/" for ::1 at 2020-08-24 14:56:46 +0100
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+:
+
+Started POST "/__better_errors/0642ee23b367fbd2/variables" for ::1 at 2020-08-24 14:56:46 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7395633852180811650)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddSomeTimestampFieldToLogs (20200824112904)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "logs" ADD "my_timestamp_field" timestamp[0m
+  ↳ db/migrate/20200824112904_add_some_timestamp_field_to_logs.rb:3
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(7395633852180811650)[0m
+  ↳ bin/rails:9
+Started GET "/" for ::1 at 2020-08-24 14:57:59 +0100
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+:
+
+Started POST "/__better_errors/32b1e2ddb5d05cf6/variables" for ::1 at 2020-08-24 14:57:59 +0100
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/bin/rake:23
+  [1m[35m (329.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "sample_development"[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/bin/rake:23
+  [1m[35m (324.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "sample_test"[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/bin/rake:23
+  [1m[35m (829.4ms)[0m  [1m[35mCREATE DATABASE "sample_development" ENCODING = 'unicode'[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/bin/rake:23
+  [1m[35m (1073.3ms)[0m  [1m[35mCREATE DATABASE "sample_test" ENCODING = 'unicode'[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/bin/rake:23
+  [1m[35mSQL (13.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:4
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "blogs" CASCADE[0m
+  ↳ db/schema.rb:6
+  [1m[35m (88.6ms)[0m  [1m[35mCREATE TABLE "blogs" ("id" bigserial primary key, "title" character varying, "content" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:6
+  [1m[35m (97.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:1
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:1
+  [1m[35m (8.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200815105856)[0m
+  ↳ db/schema.rb:1
+  [1m[35m (76.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:1
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:1
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:1
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-08-24 15:03:54.020294"], ["updated_at", "2020-08-24 15:03:54.020294"]]
+  ↳ db/schema.rb:1
+  [1m[35m (20.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:1
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/bin/rake:23
+  [1m[35mSQL (0.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:4
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "blogs" CASCADE[0m
+  ↳ db/schema.rb:6
+  [1m[35m (135.7ms)[0m  [1m[35mCREATE TABLE "blogs" ("id" bigserial primary key, "title" character varying, "content" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:6
+  [1m[35m (118.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:1
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:1
+  [1m[35m (8.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200815105856)[0m
+  ↳ db/schema.rb:1
+  [1m[35m (86.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:1
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:1
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:1
+  [1m[36mActiveRecord::InternalMetadata Create (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-08-24 15:03:54.459970"], ["updated_at", "2020-08-24 15:03:54.459970"]]
+  ↳ db/schema.rb:1
+  [1m[35m (26.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:1
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Update (0.6ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-08-24 15:03:54.493695"], ["key", "environment"]]
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/bin/rake:23
+  [1m[35m (4.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7395633852180811650)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddSomeTimestampFieldToLogs (20200824112904)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "logs" ADD "my_timestamp_field" timestamp[0m
+  ↳ db/migrate/20200824112904_add_some_timestamp_field_to_logs.rb:3
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7395633852180811650)[0m
+  ↳ bin/rails:9
+Started GET "/" for ::1 at 2020-08-24 15:05:13 +0100
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+:
+
+Started POST "/__better_errors/ee26315b73ce7ab9/variables" for ::1 at 2020-08-24 15:05:13 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7395633852180811650)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddSomeTimestampFieldToLogs (20200824112904)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "logs" ADD "my_timestamp_field" timestamp[0m
+  ↳ db/migrate/20200824112904_add_some_timestamp_field_to_logs.rb:3
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7395633852180811650)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7395633852180811650)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddSomeTimestampFieldToLogs (20200824112904)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (2.2ms)[0m  [1m[35mALTER TABLE "logs" ADD "my_timestamp_field" timestamp[0m
+  ↳ db/migrate/20200824112904_add_some_timestamp_field_to_logs.rb:3
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(7395633852180811650)[0m
+  ↳ bin/rails:9
+Started GET "/" for ::1 at 2020-08-24 15:20:12 +0100
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+:
+
+Started POST "/__better_errors/2e7ec39778474759/variables" for ::1 at 2020-08-24 15:20:12 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7395633852180811650)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddSomeTimestampFieldToLogs (20200824112904)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "logs" ADD "my_timestamp_field" timestamp[0m
+  ↳ db/migrate/20200824112904_add_some_timestamp_field_to_logs.rb:3
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7395633852180811650)[0m
+  ↳ bin/rails:9
+Started GET "/" for ::1 at 2020-08-24 16:02:55 +0100
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+:
+
+Started POST "/__better_errors/8edb937cf5b5b68a/variables" for ::1 at 2020-08-24 16:02:55 +0100
+Started GET "/" for ::1 at 2020-08-24 16:02:56 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+:
+
+Started POST "/__better_errors/02e06f44a53c9c27/variables" for ::1 at 2020-08-24 16:02:56 +0100
+Started POST "/__better_errors/02e06f44a53c9c27/variables" for ::1 at 2020-08-24 16:03:14 +0100
+  [1m[35m (241.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "sample_development"[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/bin/rake:23
+  [1m[35m (319.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "sample_test"[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/bin/rake:23
+Started GET "/" for ::1 at 2020-08-24 16:13:09 +0100
+
+ActiveRecord::NoDatabaseError - FATAL:  database "sample_development" does not exist
+:
+
+Started POST "/__better_errors/a59e6951090d10b3/variables" for ::1 at 2020-08-24 16:13:09 +0100
+Started GET "/" for ::1 at 2020-08-24 16:13:10 +0100
+
+ActiveRecord::NoDatabaseError - FATAL:  database "sample_development" does not exist
+:
+
+Started POST "/__better_errors/3445d799604d9255/variables" for ::1 at 2020-08-24 16:13:11 +0100
+  [1m[35m (1442.8ms)[0m  [1m[35mCREATE DATABASE "sample_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (853.4ms)[0m  [1m[35mCREATE DATABASE "sample_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (121.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (107.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7395633852180811650)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddFieldnameToTablename (20200824115307)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (1.9ms)[0m  [1m[35mALTER TABLE "tablenames" ADD "fieldname" character varying[0m
+  ↳ db/migrate/20200824115307_add_fieldname_to_tablename.rb:3
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(7395633852180811650)[0m
+  ↳ bin/rails:9
+Started GET "/" for ::1 at 2020-08-24 16:14:37 +0100
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+:
+
+Started POST "/__better_errors/c62cf5fd9a2879e8/variables" for ::1 at 2020-08-24 16:14:37 +0100
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7395633852180811650)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddFieldnameToTablename (20200824115307)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (1.7ms)[0m  [1m[35mALTER TABLE "tablenames" ADD "fieldname" character varying[0m
+  ↳ db/migrate/20200824115307_add_fieldname_to_tablename.rb:3
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(7395633852180811650)[0m
+  ↳ bin/rails:9
+Started GET "/" for ::1 at 2020-08-24 16:15:18 +0100
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+:
+
+Started POST "/__better_errors/8cf526bcaecb82dc/variables" for ::1 at 2020-08-24 16:15:18 +0100
+Started GET "/" for ::1 at 2020-08-24 16:15:19 +0100
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+:
+
+Started POST "/__better_errors/e27abd931cf0a050/variables" for ::1 at 2020-08-24 16:15:19 +0100
+  [1m[35m (1033.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "sample_development"[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/bin/rake:23
+  [1m[35m (319.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "sample_test"[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/bin/rake:23
+Started GET "/" for ::1 at 2020-08-24 16:25:11 +0100
+
+ActiveRecord::NoDatabaseError - FATAL:  database "sample_development" does not exist
+:
+
+Started POST "/__better_errors/b95e38be39fc5006/variables" for ::1 at 2020-08-24 16:25:11 +0100
+  [1m[35m (1119.2ms)[0m  [1m[35mCREATE DATABASE "sample_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (814.9ms)[0m  [1m[35mCREATE DATABASE "sample_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (120.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (84.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7395633852180811650)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddSomeTimestampFieldToBlogs (20200824154006)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "blogs" ADD "my_timestamp_field" timestamp[0m
+  ↳ db/migrate/20200824154006_add_some_timestamp_field_to_blogs.rb:3
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7395633852180811650)[0m
+  ↳ bin/rails:9
+Started GET "/" for ::1 at 2020-08-24 16:41:41 +0100
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+:
+
+Started POST "/__better_errors/bd1f2b2597009fe7/variables" for ::1 at 2020-08-24 16:41:41 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7395633852180811650)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddSomeTimestampFieldToBlogs (20200824154006)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (1.5ms)[0m  [1m[35mALTER TABLE "blogs" ADD "my_timestamp_field" timestamp[0m
+  ↳ db/migrate/20200824154006_add_some_timestamp_field_to_blogs.rb:3
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7395633852180811650)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7395633852180811650)[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/bin/rake:23
+Migrating to AddSomeTimestampFieldToBlogs (20200824154006)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "blogs" ADD "my_timestamp_field" timestamp[0m
+  ↳ db/migrate/20200824154006_add_some_timestamp_field_to_blogs.rb:3
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7395633852180811650)[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/bin/rake:23
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE DATABASE "sample_development" ENCODING = 'unicode'[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE DATABASE "sample_test" ENCODING = 'unicode'[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7395633852180811650)[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/bin/rake:23
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/bin/rake:23
+Migrating to AddSomeTimestampFieldToBlogs (20200824154006)
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/bin/rake:23
+  [1m[35m (1.8ms)[0m  [1m[35mALTER TABLE "blogs" ADD "my_timestamp_field" timestamp[0m
+  ↳ db/migrate/20200824154006_add_some_timestamp_field_to_blogs.rb:3
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7395633852180811650)[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1034.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "sample_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (328.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "sample_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (1304.5ms)[0m  [1m[35mCREATE DATABASE "sample_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (826.5ms)[0m  [1m[35mCREATE DATABASE "sample_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (168.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (106.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7395633852180811650)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7395633852180811650)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7395633852180811650)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddSomeTimestampFieldToBlogs (20200824154006)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "blogs" ADD "my_timestamp_field" timestamp[0m
+  ↳ db/migrate/20200824154006_add_some_timestamp_field_to_blogs.rb:3
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7395633852180811650)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE DATABASE "sample_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE DATABASE "sample_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (532.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "sample_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (329.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "sample_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (883.8ms)[0m  [1m[35mCREATE DATABASE "sample_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (826.8ms)[0m  [1m[35mCREATE DATABASE "sample_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (326.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "sample_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (329.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "sample_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (818.6ms)[0m  [1m[35mCREATE DATABASE "sample_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (825.7ms)[0m  [1m[35mCREATE DATABASE "sample_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:6
+  [1m[35m (109.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:4
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:4
+  [1m[35m (10.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (0)[0m
+  ↳ db/schema.rb:4
+  [1m[35m (98.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:4
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:4
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-08-24 18:51:00.754008"], ["updated_at", "2020-08-24 18:51:00.754008"]]
+  ↳ db/schema.rb:4
+  [1m[35m (4.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:6
+  [1m[35m (91.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:4
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:4
+  [1m[35m (7.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (0)[0m
+  ↳ db/schema.rb:4
+  [1m[35m (98.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:4
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:4
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-08-24 18:51:00.999890"], ["updated_at", "2020-08-24 18:51:00.999890"]]
+  ↳ db/schema.rb:4
+  [1m[35m (5.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (0.4ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-08-24 18:51:01.009161"], ["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (6.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1126.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "sample_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (332.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "sample_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (827.3ms)[0m  [1m[35mCREATE DATABASE "sample_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (848.5ms)[0m  [1m[35mCREATE DATABASE "sample_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE DATABASE "sample_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE DATABASE "sample_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+Started GET "/" for ::1 at 2020-08-24 20:17:01 +0100
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+:
+
+Started POST "/__better_errors/f89b33476aa3886e/variables" for ::1 at 2020-08-24 20:17:01 +0100
+  [1m[35m (83.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (107.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7395633852180811650)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to Createblogs (20200824175337)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7395633852180811650)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7395633852180811650)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to Createblogs (20200824175337)
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_advisory_unlock(7395633852180811650)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7395633852180811650)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to Createblogs (20200824175337)
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (154.6ms)[0m  [1m[35mCREATE TABLE "blogs" ("id" bigserial primary key, "content" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20200824175337_createblogs.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200824175337"]]
+  ↳ bin/rails:9
+  [1m[35m (15.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-08-24 20:20:01.878740"], ["updated_at", "2020-08-24 20:20:01.878740"]]
+  ↳ bin/rails:9
+  [1m[35m (8.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(7395633852180811650)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for ::1 at 2020-08-24 20:20:41 +0100
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.7ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:9
+  Rendered blogs/index.html.erb within layouts/application (5.5ms)
+  Rendered layouts/_nav.html.erb (0.5ms)
+Completed 200 OK in 1287ms (Views: 1268.5ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for ::1 at 2020-08-24 20:21:00 +0100
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.8ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:9
+  Rendered blogs/index.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_nav.html.erb (0.3ms)
+Completed 200 OK in 101ms (Views: 99.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/blogs/new" for ::1 at 2020-08-24 20:21:14 +0100
+Processing by BlogsController#new as HTML
+  Rendering blogs/new.html.erb within layouts/application
+  Rendered blogs/_form.html.erb (31.6ms)
+  Rendered blogs/new.html.erb within layouts/application (34.4ms)
+  Rendered layouts/_nav.html.erb (0.5ms)
+Completed 200 OK in 144ms (Views: 116.8ms | ActiveRecord: 4.9ms)
+
+
+Started POST "/blogs/confirm" for ::1 at 2020-08-24 20:21:19 +0100
+Processing by BlogsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Z9RVdwHOiCyxEEcT2ZOdCc+dJULKT7QnBtbfZhfS6nhjnXh15P1IgASRWUnIydlLbx7X0iXDRVY5svxwrAMbxg==", "blog"=>{"content"=>"yyyyy"}, "commit"=>"Create Blog"}
+  Rendering blogs/confirm.html.erb within layouts/application
+  Rendered blogs/confirm.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_nav.html.erb (0.6ms)
+Completed 200 OK in 65ms (Views: 62.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/blogs" for ::1 at 2020-08-24 20:21:20 +0100
+Processing by BlogsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"X2c78ZImE4Gg3ATpRzwCg9ZrJCQF203fur86wrVnorJbLhbzdxXTLRVdGrNWZkbBdujWtOpXvK6F2xnUDrZTDA==", "blog"=>{"content"=>"yyyyy"}, "commit"=>"Valider"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/blogs_controller.rb:18
+  [1m[36mBlog Create (0.7ms)[0m  [1m[32mINSERT INTO "blogs" ("content", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["content", "yyyyy"], ["created_at", "2020-08-24 20:21:20.778021"], ["updated_at", "2020-08-24 20:21:20.778021"]]
+  ↳ app/controllers/blogs_controller.rb:18
+  [1m[35m (106.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/blogs_controller.rb:18
+Redirected to http://localhost:3000/blogs
+Completed 302 Found in 112ms (ActiveRecord: 107.3ms)
+
+
+Started GET "/blogs" for ::1 at 2020-08-24 20:21:20 +0100
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:9
+  Rendered blogs/index.html.erb within layouts/application (26.8ms)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.3ms)
+
+
+
+ActionView::Template::Error - undefined method `title' for #<Blog:0x00007f65fc1c0b88>:
+  app/views/blogs/index.html.erb:11:in `view template'
+
+Started POST "/__better_errors/524d434104e9d09b/variables" for ::1 at 2020-08-24 20:21:21 +0100
+Started GET "/blogs" for ::1 at 2020-08-24 20:29:43 +0100
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.9ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:9
+  Rendered blogs/index.html.erb within layouts/application (22.9ms)
+  Rendered layouts/_nav.html.erb (0.3ms)
+Completed 200 OK in 288ms (Views: 271.4ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/blogs/new" for ::1 at 2020-08-24 20:29:49 +0100
+Processing by BlogsController#new as HTML
+  Rendering blogs/new.html.erb within layouts/application
+  Rendered blogs/_form.html.erb (7.6ms)
+  Rendered blogs/new.html.erb within layouts/application (9.0ms)
+  Rendered layouts/_nav.html.erb (2.0ms)
+Completed 200 OK in 118ms (Views: 117.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/blogs/confirm" for ::1 at 2020-08-24 20:29:53 +0100
+Processing by BlogsController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dAJ/Uj/U2y7KinrEBGAjcJI1buWAx6Jnxhn67bVMqvRwS1JQ2ucbgn8LZJ4VOmcyMracdW9LUxb5fdn7Dp1bSg==", "blog"=>{"content"=>"hggkvk"}, "commit"=>"Create Blog"}
+  Rendering blogs/confirm.html.erb within layouts/application
+  Rendered blogs/confirm.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_nav.html.erb (0.3ms)
+Completed 200 OK in 78ms (Views: 74.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/blogs" for ::1 at 2020-08-24 20:29:54 +0100
+Processing by BlogsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yWPoRDcjpyDfIMSS9Y82hV1/6YqeIsjDynR+GpijharNKsVG0hBnjGqh2sjk1XLH/fwbGnGuObL1EF0MI3J0FA==", "blog"=>{"content"=>"hggkvk"}, "commit"=>"Valider"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/blogs_controller.rb:18
+  [1m[36mBlog Create (0.6ms)[0m  [1m[32mINSERT INTO "blogs" ("content", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["content", "hggkvk"], ["created_at", "2020-08-24 20:29:54.904433"], ["updated_at", "2020-08-24 20:29:54.904433"]]
+  ↳ app/controllers/blogs_controller.rb:18
+  [1m[35m (791.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/blogs_controller.rb:18
+Redirected to http://localhost:3000/blogs
+Completed 302 Found in 799ms (ActiveRecord: 792.4ms)
+
+
+Started GET "/blogs" for ::1 at 2020-08-24 20:29:55 +0100
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:9
+  Rendered blogs/index.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_nav.html.erb (0.5ms)
+Completed 200 OK in 66ms (Views: 63.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/blogs" for ::1 at 2020-08-24 20:32:01 +0100
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wilromeo/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:9
+  Rendered blogs/index.html.erb within layouts/application (16.0ms)
+  Rendered layouts/_nav.html.erb (0.3ms)
+Completed 200 OK in 304ms (Views: 286.7ms | ActiveRecord: 7.8ms)
+
+
